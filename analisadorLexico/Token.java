@@ -10,7 +10,9 @@ public class Token {
 	public final static String SYMBOL_TOKEN = "SYMBOL_TOKEN";
 	public final static String IDENTIFIER_TOKEN = "IDENTIFIER_TOKEN";
 	public final static String INTEGER_TOKEN = "INTEGER_TOKEN";
-	
+	public final static String TIME = "TIME";
+	public final static String NONTERMINAL = "NONTERMINAL";
+
 	public Token(int linha, String tipo, String valor) {
 		super();
 		this.linha = linha;

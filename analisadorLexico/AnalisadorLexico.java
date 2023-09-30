@@ -11,8 +11,10 @@ public class AnalisadorLexico {
 
 	public final static char LINE_TOKEN = '�';
 
-	static String RESERVED_WORD[] = { "programaSOL", "Explore", "Present", "Interact", "Critique", "loop", "visualizarpdf", "visualizarvídeo", "videoconferencia", "whatsappweb", "email",
-	"browser", "navegador", "quinzemim", "vintemim", "umahora", "umdia", "doisdias", "semlimite"};
+	static String RESERVED_WORD[] = { "programaSOL", "Explore", "Present", "Interact", "Critique", "visualizarpdf", "visualizarvídeo", "videoconferencia", "whatsappweb", "email",
+		"browser", "navegador"};
+	static String TEMPO[] = {"quinzemim", "vintemim", "umahora", "umdia", "doisdias", "semlimite"};
+	static String NAOTERMINAL[] = {"loop"};
 	static String[] SYMBOLS = {";"};
 	
 	public static LinkedList<Token> parceLexico(String file) throws Exception {
@@ -40,8 +42,19 @@ public class AnalisadorLexico {
 					c = string.charAt(i);
 				}
 				i--;
-				tokenlist.add(new Token(lineCount,
-						contains(buffer, RESERVED_WORD) ? Token.RESERVED_WORD_TOKEN : Token.IDENTIFIER_TOKEN, buffer));
+				/*tokenlist.add(new Token(lineCount,
+						contains(buffer, RESERVED_WORD) ? Token.RESERVED_WORD_TOKEN : Token.TEMPO , buffer));*/
+
+				if(contains(buffer, RESERVED_WORD)){
+					tokenlist.add(new Token(lineCount, Token.RESERVED_WORD_TOKEN, buffer));
+				}
+				else if(contains(buffer, TEMPO)){
+					tokenlist.add(new Token(lineCount, Token.TIME, buffer));
+				}
+				else if(contains(buffer, NAOTERMINAL)){
+					tokenlist.add(new Token(lineCount, Token.NONTERMINAL, buffer));
+				}
+						
 				buffer = "";
 				continue;
 			}

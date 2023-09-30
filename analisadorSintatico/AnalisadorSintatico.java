@@ -118,8 +118,12 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 			tempo();
+			if (tokens.get(i).getValor().equals(";")) {
+				getToken(i++);
+			}
 		}
 	}
+	
 	public void interact(){
 		//Ler Link de navegador
 		if (tokens.get(i).getValor().equals("whatsappweb")){
@@ -149,6 +153,9 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 			tempo();
+			if (tokens.get(i).getValor().equals(";")) {
+				getToken(i++);
+			}
 		}
 	}
 	public void critique(){
@@ -180,6 +187,9 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 			tempo();
+			if (tokens.get(i).getValor().equals(";")) {
+				getToken(i++);
+			}
 		}
 	}
 	public void tempo(){

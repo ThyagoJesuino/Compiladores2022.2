@@ -27,7 +27,7 @@ Atualizacoes feitas na BNF:
   Simbolos adicionados/removidos na BNF: antes/depois
   
     programa_SOL --> loop vezes sequência / programaSOL --> loop vezes sequência;
-    Explore navegar tempo ; | Explore / Explore navegar tempo | Explore
+    Explore --> navegar tempo ; | Explore / Explore --> navegar tempo | Explore
   
   Termos alterados para evitar redundaçia: antes / depois
   

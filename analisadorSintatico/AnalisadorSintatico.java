@@ -90,7 +90,7 @@ public class AnalisadorSintatico {
 		}
 	}
 	public void present(){
-		//Ler Link de navegador
+		//Abrir Drive
 		if (tokens.get(i).getValor().equals("visualizarpdf")){
 			getToken(i++);
 			try{
@@ -100,6 +100,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Youtube
 		else if (tokens.get(i).getValor().equals("visualizarvideo")){
 			getToken(i++);
 			try{
@@ -109,6 +110,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Meet
 		else if (tokens.get(i).getValor().equals("videoconferencia")){
 			getToken(i++);
 			try{
@@ -125,7 +127,7 @@ public class AnalisadorSintatico {
 	}
 	
 	public void interact(){
-		//Ler Link de navegador
+		//Abrir Whatsappweb
 		if (tokens.get(i).getValor().equals("whatsappweb")){
 			getToken(i++);
 			try{
@@ -135,6 +137,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Gmail
 		else if (tokens.get(i).getValor().equals("email")){
 			getToken(i++);
 			try{
@@ -144,6 +147,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Meet
 		else if (tokens.get(i).getValor().equals("videoconferencia")){
 			getToken(i++);
 			try{
@@ -159,7 +163,7 @@ public class AnalisadorSintatico {
 		}
 	}
 	public void critique(){
-		//Ler Link de navegador
+		//Abrir Whatsappweb
 		if (tokens.get(i).getValor().equals("whatsappweb")){
 			getToken(i++);
 			try{
@@ -169,6 +173,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Gmail
 		else if (tokens.get(i).getValor().equals("email")){
 			getToken(i++);
 			try{
@@ -178,6 +183,7 @@ public class AnalisadorSintatico {
          	 	System.out.println("ERRO");
        		}
 		}
+		//Abrir Meet
 		else if (tokens.get(i).getValor().equals("videoconferencia")){
 			getToken(i++);
 			try{

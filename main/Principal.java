@@ -11,8 +11,8 @@ public class Principal {
 	public static void main(String[] args) {
 		LinkedList<Token> tokens = null;
 		try {
-
-			tokens = AnalisadorLexico.parceLexico("C:/Ufal/Ufl/Analisadores-main/Analisadores-main/AnalisadorSintatico/src/textfile.txt");
+			//Adicionar origem onde o textfile.txt esta localizado no PC do usuario.
+			tokens = AnalisadorLexico.parceLexico("textfile.txt");
 
 		} catch (Exception e) {
 			e.printStackTrace();

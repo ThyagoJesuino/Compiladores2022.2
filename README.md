@@ -21,13 +21,12 @@ Atualizacoes feitas na BNF:
  
   Termos alterados na BNF: antes/depois
   
-    programa_SOL --> loop vezes sequência / programaSOL --> loop vezes sequência
     tempo --> | 20_min | 1_hora | 1_dia | 2_dias | sem limite
     | 15_min / tempo --> quinzemin | vintemin | umahora | umdia | doisdias | semlimite
    
   Simbolos adicionados/removidos na BNF: antes/depois
   
-    programa_SOL --> loop vezes sequência / programa_SOL --> loop vezes sequência;
+    programa_SOL --> loop vezes sequência / programaSOL --> loop vezes sequência;
     Explore navegar tempo ; | Explore / Explore navegar tempo | Explore
   
   Termos alterados para evitar redundaçia: antes / depois
